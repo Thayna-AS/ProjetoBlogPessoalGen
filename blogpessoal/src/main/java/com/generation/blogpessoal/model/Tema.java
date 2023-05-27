@@ -23,7 +23,7 @@ public class Tema {
 	private long id;
 	
 	@NotNull(message = "Este campo Descrição é de spreenchimento obrigatório")
-	private String descrição;
+	private String descricao;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "tema", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("tema")
@@ -39,11 +39,11 @@ public class Tema {
 	}
 
 	public String getDescrição() {
-		return descrição;
+		return descricao;
 	}
 
 	public void setDescrição(String descrição) {
-		this.descrição = descrição;
+		this.descricao = descrição;
 	}
 	
 	
